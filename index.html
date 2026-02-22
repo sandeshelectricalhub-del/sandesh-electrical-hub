@@ -54,17 +54,6 @@ nav a{
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-.price-table{
-    width:100%;
-    max-width:700px;
-    margin:auto;
-    border-collapse:collapse;
-}
-.price-table th,
-.price-table td{
-    padding:10px;
-    border:1px solid #ddd;
-}
 button{
     background:#16a34a;
     color:white;
@@ -112,7 +101,6 @@ input, textarea{
 
 <nav>
 <a href="#products">Products</a>
-<a href="#price">Price List</a>
 <a href="#contractor">Contractor Section</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
@@ -156,28 +144,6 @@ input, textarea{
 <p>
 Polycab | Finolex | Anchor | Legrand | Crompton | Goldmedal | GM | Philips | Havells | Halonix | RR | L&T | Echolink | Taparia | V-Guard | Orient | Bajaj
 </p>
-</section>
-
-<section id="price" class="section">
-<h2>💰 Price List</h2>
-<table class="price-table">
-<tr>
-<th>Product</th>
-<th>Price</th>
-</tr>
-<tr>
-<td>1.5 sqmm Wire</td>
-<td>₹ 1500 / Bundle</td>
-</tr>
-<tr>
-<td>6A Switch</td>
-<td>₹ 120 / Piece</td>
-</tr>
-<tr>
-<td>MCB 16A</td>
-<td>₹ 350 / Piece</td>
-</tr>
-</table>
 </section>
 
 <section id="contractor" class="section">
@@ -229,7 +195,7 @@ Follow us on Instagram:
 
 <script>
 function scrollToSection(){
-    document.getElementById("price").scrollIntoView({behavior:"smooth"});
+    document.getElementById("contractor").scrollIntoView({behavior:"smooth"});
 }
 
 // WhatsApp form submit
