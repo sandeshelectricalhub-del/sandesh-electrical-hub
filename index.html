@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sandesh Electrical Hub | Wagholi Pune</title>
+<meta name="description" content="Sandesh Electrical Hub in Wagholi Pune – Wires, Switches, MCBs, Fans, Lights & more at wholesale prices.">
+<meta name="keywords" content="Electrical Materials, Wires, Switches, MCB, Fans, Lights, Pune, Wagholi">
 
 <style>
-
 /* ===== GENERAL ===== */
 body{
     margin:0;
@@ -85,6 +86,65 @@ body{
     box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 
+/* ===== HERO CARD SLIDER ===== */
+.hero-card-slider {
+    margin-top:40px;
+    overflow:hidden;
+    width:100%;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    gap:20px;
+    position:relative;
+}
+
+.hero-card-slide {
+    min-width:100%;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    padding:30px 20px;
+    color:white;
+    text-align:center;
+    transition: transform 0.5s ease-in-out;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-card-slide h3 {
+    color:#facc15;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.hero-card-slide p {
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* ===== HERO DOTS ===== */
+.hero-dots {
+    text-align:center;
+    margin-top:20px;
+}
+
+.hero-dots .dot {
+    display:inline-block;
+    height:12px;
+    width:12px;
+    background:#facc15;
+    border-radius:50%;
+    margin:0 6px;
+    cursor:pointer;
+    opacity:0.5;
+    transition:opacity 0.3s, transform 0.3s;
+}
+
+.hero-dots .dot.active {
+    opacity:1;
+    transform:scale(1.2);
+}
+
 /* ===== BRAND SLIDER ===== */
 .brand-slider{
     overflow:hidden;
@@ -127,6 +187,12 @@ body{
     width:250px;
     border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Hover */
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ===== CONTACT ===== */
@@ -180,8 +246,11 @@ footer{
 @media(max-width:768px){
     .cards{flex-direction:column;}
     .card{width:90%;}
+    .hero-card-slide { padding:20px 15px; }
+    .hero-card-slide h3 { font-size:18px; }
+    .hero-card-slide p { font-size:15px; }
+    .hero-dots .dot { height:10px; width:10px; margin:0 4px; }
 }
-
 </style>
 </head>
 
@@ -194,7 +263,7 @@ footer{
 <a href="#contact">Contact</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO + PREMIUM ABOUT CARDS -->
 <section class="hero">
 <h1>Sandesh Electrical Hub</h1>
 <p class="about-text">
@@ -206,12 +275,42 @@ Sandesh Electrical Hub – Top-brand electricals, instant availability, expert s
 <a href="https://wa.me/919527431915" target="_blank">
 <button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
 </a>
-
 <a href="tel:9527431915">
 <button class="btn call-btn">📞 Call Now</button>
 </a>
+
+<div class="hero-card-slider">
+    <div class="hero-card-slide">
+      <h3>🎯 Mission</h3>
+      <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+    </div>
+    <div class="hero-card-slide">
+      <h3>🚀 Vision</h3>
+      <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
+    </div>
+    <div class="hero-card-slide">
+      <h3>🏆 Top Brands</h3>
+      <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
+    </div>
+    <div class="hero-card-slide">
+      <h3>😊 Happy Customers</h3>
+      <p>1000+ satisfied customers served in Pune.</p>
+    </div>
+    <div class="hero-card-slide">
+      <h3>⏳ Years Experience</h3>
+      <p>5+ years of expertise in electrical solutions.</p>
+    </div>
+</div>
+
+<div class="hero-dots">
+  <span class="dot active" data-index="0"></span>
+  <span class="dot" data-index="1"></span>
+  <span class="dot" data-index="2"></span>
+  <span class="dot" data-index="3"></span>
+  <span class="dot" data-index="4"></span>
+</div>
 </section>
-    
+
 <!-- BRAND SLIDER -->
 <section class="brand-slider">
 <div class="brand-track">
@@ -244,156 +343,6 @@ Sandesh Electrical Hub – Top-brand electricals, instant availability, expert s
 </div>
 </section>
 
-<!-- ===== PREMIUM ABOUT SECTION UPGRADE ===== -->
-<style>
-.about-section {
-    padding:80px 20px;
-    background:linear-gradient(135deg,#f8fafc,#e2e8f0);
-    text-align:center;
-}
-
-.about-container {
-    max-width:1200px;
-    margin:auto;
-}
-
-/* About Text */
-.about-text {
-    max-width:900px;
-    margin:20px auto 50px;
-    line-height:1.8;
-    color:#444;
-}
-
-/* Counter Section */
-.counter-container {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-    margin-bottom:60px;
-}
-
-.counter-box {
-    background:rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    padding:30px;
-    border-radius:20px;
-    width:220px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.counter-box:hover {
-    transform:translateY(-5px);
-}
-
-.counter-number {
-    font-size:32px;
-    font-weight:bold;
-    color:#1e3a8a;
-}
-
-/* Mission Vision */
-.mv-container {
-    display:flex;
-    gap:30px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.mv-card {
-    background:white;
-    padding:30px;
-    width:450px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
-    transition:0.4s ease;
-}
-
-.mv-card:hover {
-    transform:translateY(-8px);
-}
-
-.mv-card h3 {
-    color:#1e3a8a;
-}
-
-/* Mobile */
-@media(max-width:768px){
-    .mv-card { width:90%; }
-    .counter-box { width:90%; }
-}
-</style>
-
-<section class="about-section">
-<div class="about-container">
-
-<h2>About Sandesh Electrical Hub</h2>
-<!-- COUNTERS -->
-<div class="counter-container">
-<div class="counter-box">
-<div class="counter-number" data-target="20">0</div>
-<p>+ Top Brands</p>
-</div>
-
-<div class="counter-box">
-<div class="counter-number" data-target="1000">0</div>
-<p>+ Happy Customers</p>
-</div>
-
-<div class="counter-box">
-<div class="counter-number" data-target="5">0</div>
-<p>+ Years Experience</p>
-</div>
-</div>
-
-<!-- MISSION & VISION -->
-<div class="mv-container">
-
-<div class="mv-card">
-<h3>🎯 Our Mission</h3>
-<p>
-Delivering trusted electrical products with speed, honesty, and unbeatable value.
-</p>
-</div>
-
-<div class="mv-card">
-<h3>🚀 Our Vision</h3>
-<p>
-Powering Homes office & industry with reliability, excellence, and a customer experience that sets the standard.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<script>
-/* Counter Animation */
-const counters = document.querySelectorAll('.counter-number');
-
-const speed = 100;
-
-counters.forEach(counter => {
-    const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / speed;
-
-        if(count < target){
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 20);
-        } else {
-            counter.innerText = target + "+";
-        }
-    };
-
-    updateCount();
-});
-</script>
-
 <!-- REVIEWS -->
 <section id="reviews" class="section">
 <h2>Customer Reviews</h2>
@@ -406,9 +355,7 @@ counters.forEach(counter => {
 <h2>Contact Us</h2>
 <p>📞 9527431915</p>
 <p>📍 Wagholi, Pune</p>
-
-<iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed"
-width="100%" height="250" style="border:0;"></iframe>
+<iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
 </section>
 
 <footer>
@@ -423,13 +370,41 @@ Chat on WhatsApp for Best Price
 </a>
 </div>
 
+<script>
+/* HERO CARD SLIDER SCRIPT */
+const heroSlides = document.querySelectorAll('.hero-card-slide');
+const dots = document.querySelectorAll('.dot');
+let heroIndex = 0;
+
+function showHeroSlide(index){
+    heroSlides.forEach((slide,i)=>{
+        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+    });
+    dots.forEach(dot=>dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+// Initialize
+showHeroSlide(heroIndex);
+
+// Auto-slide every 4 seconds
+let heroInterval = setInterval(()=>{
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    showHeroSlide(heroIndex);
+},4000);
+
+// Dot click event
+dots.forEach(dot=>{
+    dot.addEventListener('click',()=>{
+        heroIndex = parseInt(dot.getAttribute('data-index'));
+        showHeroSlide(heroIndex);
+        clearInterval(heroInterval);
+        heroInterval = setInterval(()=>{
+            heroIndex = (heroIndex + 1) % heroSlides.length;
+            showHeroSlide(heroIndex);
+        },4000);
+    });
+});
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
