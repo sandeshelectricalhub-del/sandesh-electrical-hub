@@ -1,68 +1,102 @@
-<section class="hero">
-<h1>Sandesh Electrical Hub</h1>
-<p class="about-text">
-Sandesh Electrical Hub – Top-brand electricals, instant availability, expert service. Power your space the smart way!
-</p>
-<p class="blink">✔ All Material Available at Wholesale Price</p>
-<h3>Wholesaler | Authorized Dealer | Contractor Special Rates</h3>
-
-<a href="https://wa.me/919527431915" target="_blank">
-<button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
-</a>
-<a href="tel:9527431915">
-<button class="btn call-btn">📞 Call Now</button>
-</a>
-
-<!-- HERO SLIDER FOR MISSION & VISION ONLY -->
-<div class="hero-card-slider-container">
-  <div class="hero-card-slider">
-      <div class="hero-card-slide">
-        <h3>🎯 Mission</h3>
-        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>🚀 Vision</h3>
-        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
-      </div>
-      <!-- duplicate for smooth infinite effect -->
-      <div class="hero-card-slide">
-        <h3>🎯 Mission</h3>
-        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>🚀 Vision</h3>
-        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
-      </div>
-  </div>
-</div>
-
-<!-- STATIC INFO BELOW SLIDER -->
-<div style="margin-top:40px; display:flex; flex-wrap:wrap; justify-content:center; gap:20px; text-align:center;">
-  <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding:30px; border-radius:20px; min-width:220px; color:white; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-    <h3>🏆 Top Brands</h3>
-    <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
-  </div>
-  <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding:30px; border-radius:20px; min-width:220px; color:white; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-    <h3>😊 Happy Customers</h3>
-    <p>1000+ satisfied customers served in Pune.</p>
-  </div>
-  <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(12px); padding:30px; border-radius:20px; min-width:220px; color:white; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-    <h3>⏳ Years Experience</h3>
-    <p>5+ years of expertise in electrical solutions.</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandesh Electrical Hub | Wagholi Pune</title>
+<meta name="description" content="Sandesh Electrical Hub in Wagholi Pune – Wires, Switches, MCBs, Fans, Lights & more at wholesale prices.">
+<meta name="keywords" content="Electrical Materials, Wires, Switches, MCB, Fans, Lights, Pune, Wagholi">
 
 <style>
+/* ===== GENERAL ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* ===== STICKY NAVBAR ===== */
+.navbar{
+    position:sticky;
+    top:0;
+    background:#1e3a8a;
+    padding:15px;
+    text-align:center;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.navbar a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#facc15;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    background: linear-gradient(-45deg, #2563eb, #1e40af, #1e3a8a, #0f172a);
+    background-size:400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.blink{
+    font-size:22px;
+    font-weight:bold;
+    color:#facc15;
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+    font-size:18px;
+    padding:12px 28px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    transition:all 0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    margin:10px;
+}
+
+.whatsapp-btn{ background:#25D366; }
+.call-btn{ background:#111827; }
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== HERO CARD SLIDER ===== */
 .hero-card-slider-container{
   overflow:hidden;
-  max-width:700px;
+  max-width:900px;
   margin:40px auto 0 auto;
 }
 
 .hero-card-slider{
   display:flex;
   gap:20px;
-  animation: slideHero 8s linear infinite;
+  animation: slideHero 20s linear infinite;
 }
 
 .hero-card-slide{
@@ -90,14 +124,244 @@ Sandesh Electrical Hub – Top-brand electricals, instant availability, expert s
 
 @keyframes slideHero{
   0%{ transform: translateX(0); }
-  50%{ transform: translateX(-50%); }
-  100%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
 }
 
-/* Mobile */
+/* ===== BRAND SLIDER ===== */
+.brand-slider{
+    overflow:hidden;
+    background:white;
+    padding:20px 0;
+}
+
+.brand-track{
+    display:flex;
+    animation:scroll 20s linear infinite;
+}
+
+.brand-track div{
+    min-width:200px;
+    text-align:center;
+    font-weight:bold;
+}
+
+@keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+/* ===== PRODUCTS ===== */
+.section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== CONTACT ===== */
+input, textarea{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.float-whatsapp{
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* ===== BOTTOM BAR ===== */
+.bottom-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#25D366;
+    text-align:center;
+    padding:12px;
+}
+
+.bottom-bar a{
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ===== MOBILE ===== */
 @media(max-width:768px){
-  .hero-card-slide { padding:20px 15px; min-width:250px; }
-  .hero-card-slide h3 { font-size:18px; }
-  .hero-card-slide p { font-size:15px; }
+    .cards{flex-direction:column;}
+    .card{width:90%;}
+    .hero-card-slide { padding:20px 15px; min-width:250px; }
+    .hero-card-slide h3 { font-size:18px; }
+    .hero-card-slide p { font-size:15px; }
 }
 </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Sandesh Electrical Hub</h1>
+<p class="about-text">
+Sandesh Electrical Hub – Top-brand electricals, instant availability, expert service. Power your space the smart way!
+</p>
+<p class="blink">✔ All Material Available at Wholesale Price</p>
+<h3>Wholesaler | Authorized Dealer | Contractor Special Rates</h3>
+
+<a href="https://wa.me/919527431915" target="_blank">
+<button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
+</a>
+<a href="tel:9527431915">
+<button class="btn call-btn">📞 Call Now</button>
+</a>
+
+<div class="hero-card-slider-container">
+  <div class="hero-card-slider">
+      <div class="hero-card-slide">
+        <h3>🎯 Mission</h3>
+        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🚀 Vision</h3>
+        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🏆 Top Brands</h3>
+        <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>😊 Happy Customers</h3>
+        <p>1000+ satisfied customers served in Pune.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>⏳ Years Experience</h3>
+        <p>5+ years of expertise in electrical solutions.</p>
+      </div>
+      <!-- Duplicate slides for smooth infinite effect -->
+      <div class="hero-card-slide">
+        <h3>🎯 Mission</h3>
+        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🚀 Vision</h3>
+        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🏆 Top Brands</h3>
+        <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>😊 Happy Customers</h3>
+        <p>1000+ satisfied customers served in Pune.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>⏳ Years Experience</h3>
+        <p>5+ years of expertise in electrical solutions.</p>
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- BRAND SLIDER -->
+<section class="brand-slider">
+<div class="brand-track">
+<div>Crompton</div>
+<div>Goldmedal</div>
+<div>GM</div>
+<div>Philips</div>
+<div>Havells</div>
+<div>RR</div>
+<div>L&T</div>
+<div>Orient</div>
+<div>Bajaj</div>
+<div>Legrand</div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+<h2>Our Products</h2>
+<div class="cards">
+<div class="card">Wires</div>
+<div class="card">Switches & Socket</div>
+<div class="card">MCB & DB</div>
+<div class="card">Fans</div>
+<div class="card">Lights</div>
+<div class="card">Tools</div>
+<div class="card">Geyser</div>
+<div class="card">Pipes</div>
+<div class="card">CCTV</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section">
+<h2>Customer Reviews</h2>
+<p>★★★★★ Best electrical shop in Wagholi</p>
+<p>★★★★★ Good quality material at wholesale rate</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<p>📞 9527431915</p>
+<p>📍 Wagholi, Pune</p>
+<iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+</section>
+
+<footer>
+© 2026 Sandesh Electrical Hub | All Rights Reserved
+</footer>
+
+<a class="float-whatsapp" href="https://wa.me/919527431915" target="_blank">💬</a>
+
+<div class="bottom-bar">
+<a href="https://wa.me/919527431915" target="_blank">
+Chat on WhatsApp for Best Price
+</a>
+</div>
+</body>
+</html>
