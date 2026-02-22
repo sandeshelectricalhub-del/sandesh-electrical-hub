@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandesh Electrical Hub | Wagholi Pune</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    background:#2563eb;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(45deg,#2563eb,#1e40af);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price-table{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+.price-table th,
+.price-table td{
+    padding:10px;
+    border:1px solid #ddd;
+}
+
+button{
+    background:#16a34a;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sandesh Electrical Hub</h1>
+<p>Shop No.2, Matoshri Building, Lohegaon Road, Wagholi, Pune 412207</p>
+<p>📞 9527431915 | 📧 Sandesh.electricalhub@gmail.com</p>
+</header>
+
+<nav>
+<a href="#products">Products</a>
+<a href="#price">Price List</a>
+<a href="#contractor">Contractor Section</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<h2>All Type Electrical Material Available</h2>
+<p>Best Quality | Best Price | Trusted by Contractors</p>
+<button onclick="scrollToSection()">View Price List</button>
+</section>
+
+<section id="products" class="section">
+<h2>🔥 Our Products</h2>
+<div class="cards">
+<div class="card">
+<h3>Wires</h3>
+<p>Polycab, Finolex & more brands available.</p>
+</div>
+
+<div class="card">
+<h3>Switches</h3>
+<p>Anchor Roma, Legrand & modular switches.</p>
+</div>
+
+<div class="card">
+<h3>MCB & DB</h3>
+<p>All electrical protection materials available.</p>
+</div>
+</div>
+</section>
+
+<section id="price" class="section">
+<h2>💰 Price List</h2>
+
+<table class="price-table">
+<tr>
+<th>Product</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>1.5 sqmm Wire</td>
+<td>₹ 1500 / Bundle</td>
+</tr>
+<tr>
+<td>6A Switch</td>
+<td>₹ 120 / Piece</td>
+</tr>
+<tr>
+<td>MCB 16A</td>
+<td>₹ 350 / Piece</td>
+</tr>
+</table>
+
+</section>
+
+<section id="contractor" class="section">
+<h2>🏗 Contractor Special Pricing</h2>
+<p>Special discounted rates for bulk orders.</p>
+<button onclick="alert('Contact us for contractor price!')">Get Special Price</button>
+</section>
+
+<section id="reviews" class="section">
+<h2>⭐ Customer Reviews</h2>
+<p>★★★★★ - Best electrical shop in Wagholi!</p>
+<p>★★★★★ - Good quality material at best rates.</p>
+</section>
+
+<section id="contact" class="section">
+<h2>📍 Contact & Enquiry</h2>
+<form>
+<input type="text" placeholder="Your Name" required><br><br>
+<input type="text" placeholder="Mobile Number" required><br><br>
+<textarea placeholder="Your Requirement"></textarea><br><br>
+<button type="submit">Send Enquiry</button>
+</form>
+
+<br><br>
+
+<iframe 
+src="https://www.google.com/maps?q=Wagholi,Pune&output=embed"
+width="100%" height="300" style="border:0;" allowfullscreen>
+</iframe>
+
+</section>
+
+<footer>
+<p>© 2026 Sandesh Electrical Hub | All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919527431915" target="_blank">💬</a>
+
+<script>
+function scrollToSection(){
+    document.getElementById("price").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
