@@ -209,6 +209,173 @@ footer{
 </a>
 </section>
 
+<!-- ===== PREMIUM ABOUT SECTION UPGRADE ===== -->
+<style>
+.about-section {
+    padding:80px 20px;
+    background:linear-gradient(135deg,#f8fafc,#e2e8f0);
+    text-align:center;
+}
+
+.about-container {
+    max-width:1200px;
+    margin:auto;
+}
+
+/* About Text */
+.about-text {
+    max-width:900px;
+    margin:20px auto 50px;
+    line-height:1.8;
+    color:#444;
+}
+
+/* Shop Image */
+.shop-img {
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    margin-bottom:40px;
+}
+
+/* Counter Section */
+.counter-container {
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:60px;
+}
+
+.counter-box {
+    background:rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    padding:30px;
+    border-radius:20px;
+    width:220px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.counter-box:hover {
+    transform:translateY(-5px);
+}
+
+.counter-number {
+    font-size:32px;
+    font-weight:bold;
+    color:#1e3a8a;
+}
+
+/* Mission Vision */
+.mv-container {
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.mv-card {
+    background:white;
+    padding:30px;
+    width:450px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.4s ease;
+}
+
+.mv-card:hover {
+    transform:translateY(-8px);
+}
+
+.mv-card h3 {
+    color:#1e3a8a;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .mv-card { width:90%; }
+    .counter-box { width:90%; }
+}
+</style>
+
+<section class="about-section">
+<div class="about-container">
+
+<h2>About Sandesh Electrical Hub</h2>
+
+<img src="https://via.placeholder.com/500x300" class="shop-img" alt="Sandesh Electrical Hub Shop Image">
+
+<p class="about-text">
+Sandesh Electrical Hub is a Pune-based retail store offering electrical materials for home, office, and industrial needs.
+Our brand portfolio includes top-quality branded electrical products that ensure reliability, immediate availability, and professional service.
+</p>
+
+<!-- COUNTERS -->
+<div class="counter-container">
+<div class="counter-box">
+<div class="counter-number" data-target="20">0</div>
+<p>+ Top Brands</p>
+</div>
+
+<div class="counter-box">
+<div class="counter-number" data-target="1000">0</div>
+<p>+ Happy Customers</p>
+</div>
+
+<div class="counter-box">
+<div class="counter-number" data-target="5">0</div>
+<p>+ Years Experience</p>
+</div>
+</div>
+
+<!-- MISSION & VISION -->
+<div class="mv-container">
+
+<div class="mv-card">
+<h3>🎯 Our Mission</h3>
+<p>
+To provide customers with the best quality electrical materials quickly, transparently, and at the right price.
+</p>
+</div>
+
+<div class="mv-card">
+<h3>🚀 Our Vision</h3>
+<p>
+To become the most trusted and customer-friendly electrical material supplier in Pune by delivering excellence and value.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<script>
+/* Counter Animation */
+const counters = document.querySelectorAll('.counter-number');
+
+const speed = 100;
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if(count < target){
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target + "+";
+        }
+    };
+
+    updateCount();
+});
+</script>
+    
 <!-- BRAND SLIDER -->
 <section class="brand-slider">
 <div class="brand-track">
@@ -272,3 +439,4 @@ Chat on WhatsApp for Best Price
 
 </body>
 </html>
+
