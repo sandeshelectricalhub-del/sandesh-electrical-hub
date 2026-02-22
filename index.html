@@ -3,361 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandesh Electrical Hub | Wagholi Pune | Electrical Shop</title>
-<meta name="description" content="Sandesh Electrical Hub, Wagholi Pune - Best electrical shop. Polycab wires, Anchor switches, MCB, DB. Contractor rates & trusted brands.">
-<meta name="keywords" content="Electrical Shop Wagholi, Polycab Wire Pune, Anchor Switch Dealer, MCB Shop Pune, Electrical Supplier Pune">
-<meta name="robots" content="index, follow">
+<title>Sandesh Electrical Hub | Wagholi Pune</title>
 
 <style>
+
+/* ===== GENERAL ===== */
 body{
     margin:0;
     font-family: Arial, sans-serif;
     background:#f4f6f9;
 }
-header{
-    background:#111827;
-    color:white;
+
+/* ===== STICKY NAVBAR ===== */
+.navbar{
+    position:sticky;
+    top:0;
+    background:#1e3a8a;
     padding:15px;
     text-align:center;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
-nav{
-    background:#2563eb;
-    padding:10px;
-    text-align:center;
-}
-nav a{
+
+.navbar a{
     color:white;
-    margin:10px;
+    margin:0 15px;
     text-decoration:none;
     font-weight:bold;
+    transition:0.3s;
 }
+
+.navbar a:hover{
+    color:#facc15;
+}
+
+/* ===== HERO SECTION ===== */
 .hero{
-    background:linear-gradient(45deg,#2563eb,#1e40af);
+    background: linear-gradient(-45deg, #2563eb, #1e40af, #1e3a8a, #0f172a);
+    background-size:400% 400%;
+    animation: gradientBG 8s ease infinite;
     color:white;
-    padding:60px 20px;
+    padding:80px 20px;
     text-align:center;
 }
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.blink{
+    font-size:22px;
+    font-weight:bold;
+    color:#facc15;
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+    font-size:18px;
+    padding:12px 28px;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    color:white;
+    transition:all 0.3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    margin:10px;
+}
+
+.whatsapp-btn{ background:#25D366; }
+.call-btn{ background:#111827; }
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== BRAND SLIDER ===== */
+.brand-slider{
+    overflow:hidden;
+    background:white;
+    padding:20px 0;
+}
+
+.brand-track{
+    display:flex;
+    animation:scroll 20s linear infinite;
+}
+
+.brand-track div{
+    min-width:200px;
+    text-align:center;
+    font-weight:bold;
+}
+
+@keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+/* ===== PRODUCTS ===== */
 .section{
     padding:40px 20px;
     text-align:center;
 }
+
 .cards{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:20px;
 }
+
 .card{
     background:white;
     padding:20px;
     width:250px;
-    border-radius:10px;
+    border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-button{
-    background:#16a34a;
-    color:white;
-    padding:10px 20px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    margin-top:10px;
+
+/* ===== CONTACT ===== */
+input, textarea{
+    width:90%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:10px;
 }
+
+/* ===== FOOTER ===== */
 footer{
     background:#111827;
     color:white;
-    padding:20px;
     text-align:center;
+    padding:20px;
 }
-.whatsapp{
+
+/* ===== FLOATING WHATSAPP ===== */
+.float-whatsapp{
     position:fixed;
-    bottom:20px;
+    bottom:80px;
     right:20px;
     background:#25D366;
     color:white;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
     font-size:20px;
-    z-index:999;
+    text-decoration:none;
 }
-input, textarea{
-    width:90%;
-    padding:10px;
-    border-radius:5px;
-    border:1px solid #ccc;
-    margin-bottom:10px;
+
+/* ===== BOTTOM BAR ===== */
+.bottom-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#25D366;
+    text-align:center;
+    padding:12px;
 }
+
+.bottom-bar a{
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    .cards{flex-direction:column;}
+    .card{width:90%;}
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Sandesh Electrical Hub</h1>
-<p>Shop No.2, Matoshri Building, Lohegaon Road, Wagholi, Pune 412207</p>
-<p>📞 9527431915 | 📧 Sandesh.electricalhub@gmail.com</p>
-<p><strong>GST No:</strong> 27XXXXXXXXX1Z5</p>
-</header>
-
-<style>
-/* Sticky Modern Navbar */
-.navbar {
-    position: sticky;
-    top: 0;
-    background: #1e3a8a;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-/* Navigation Links */
-.nav-links {
-    margin-bottom: 10px;
-}
-
-.nav-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #facc15;
-}
-
-/* Buttons Container */
-.nav-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-/* Modern Buttons */
-.modern-btn {
-    font-size: 18px;
-    padding: 12px 28px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* WhatsApp Button */
-.whatsapp-btn {
-    background: #25D366;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebe5d;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* Call Button */
-.call-btn {
-    background: #111827;
-}
-
-.call-btn:hover {
-    background: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-</style>
-
-<nav class="navbar">
-
-<div class="nav-links">
+<!-- NAVBAR -->
+<div class="navbar">
 <a href="#products">Products</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </div>
 
-<div class="nav-buttons">
+<!-- HERO -->
+<section class="hero">
+<p class="blink">✔ All Material Available at Wholesale Price</p>
+<h2>Sandesh Electrical Hub</h2>
+<h3>Wholesaler | Authorized Dealer | Contractor Special Rates</h3>
+
 <a href="https://wa.me/919527431915" target="_blank">
-<button class="modern-btn whatsapp-btn">🟢 WhatsApp Now</button>
+<button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
 </a>
 
 <a href="tel:9527431915">
-<button class="modern-btn call-btn">📞 Call Now</button>
+<button class="btn call-btn">📞 Call Now</button>
 </a>
+</section>
+
+<!-- BRAND SLIDER -->
+<section class="brand-slider">
+<div class="brand-track">
+<div>Crompton</div>
+<div>Goldmedal</div>
+<div>GM</div>
+<div>Philips</div>
+<div>Havells</div>
+<div>RR</div>
+<div>L&T</div>
+<div>Orient</div>
+<div>Bajaj</div>
+<div>Legrand</div>
 </div>
-
-</nav>
-    
-<section class="hero">
-<p class="blinking" style="font-size:26px; font-weight:bold; margin-bottom:5px;">
-✔ All Material Available at Wholesale Price
-</p>
-
-<h2>Trusted Electrical Shop in Pune</h2>
-<h3 style="margin-top:5px;">Wholesaler | Authorized Dealer | Contractor Special Rates | Quick Availability</h3>
-
-<a href="https://wa.me/919527431915?text=I%20want%20quotation%20for%20electrical%20materials" target="_blank">
-<button style="font-size:22px; padding:20px 40px; border-radius:10px; margin-top:10px;">📄 Get Quotation</button>
-</a>
-
-<style>
-.blinking {
-  animation: blinker 1.2s linear infinite;
-  color: #ffdd00;
-}
-@keyframes blinker {
-  50% { opacity: 0; }
-}
-</style>
-</section>
-    
-<section class="section">
-<h2>🏷 Our Trusted Brands</h2>
-<p>
-Polycab | Finolex | Anchor | Legrand | Crompton | Goldmedal | GM | Philips | Havells | Halonix | RR | L&T | Echolink | Taparia | V-Guard | Orient | Bajaj
 </section>
 
+<!-- PRODUCTS -->
 <section id="products" class="section">
-<h2>🔥 Our Products</h2>
+<h2>Our Products</h2>
 <div class="cards">
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Wires">
-<h3>Wires</h3>
-<p>Polycab, Finolex & other branded wires available.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Switches and Socket">
-<h3>Switches and Socket</h3>
-<p>Anchor, Goldmedal, Legrand & modular switches & sockets.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="MCB & DB">
-<h3>MCB & DB</h3>
-<p>All electrical protection materials for homes & industries.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Fans">
-<h3>Fans</h3>
-<p>Ceiling, wall, table fans from trusted brands.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Tools">
-<h3>Tools</h3>
-<p>All electrical tools, testers & hand tools.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Lights">
-<h3>Lights</h3>
-<p>LED, tube lights, panel lights & decorative lighting.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Geyser">
-<h3>Geyser</h3>
-<p>Instant & storage geysers for home and commercial use.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="Pipes">
-<h3>Pipes</h3>
-<p>PVC, CPVC & other pipes available.</p>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200" width="100%" alt="CCTV">
-<h3>CCTV</h3>
-<p>Security cameras & surveillance solutions.</p>
-</div>
-
+<div class="card">Wires</div>
+<div class="card">Switches & Socket</div>
+<div class="card">MCB & DB</div>
+<div class="card">Fans</div>
+<div class="card">Lights</div>
+<div class="card">Tools</div>
+<div class="card">Geyser</div>
+<div class="card">Pipes</div>
+<div class="card">CCTV</div>
 </div>
 </section>
 
-
+<!-- REVIEWS -->
 <section id="reviews" class="section">
-<h2>⭐ Customer Reviews</h2>
-<p>★★★★★ - Best electrical shop in Wagholi!</p>
-<p>★★★★★ - Good quality material at best rates.</p>
-<a href="https://search.google.com/local/writereview?placeid=ChIJBW8N1DTFwrwRbWLJ2cO5Wkw" target="_blank">
-<button>⭐ Give Us Review on Google</button>
-</a>
+<h2>Customer Reviews</h2>
+<p>★★★★★ Best electrical shop in Wagholi</p>
+<p>★★★★★ Good quality material at wholesale rate</p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
-<h2>📍 Contact & Enquiry</h2>
-<form onsubmit="sendWhatsApp(); return false;">
-<input type="text" placeholder="Your Name" required><br><br>
-<input type="text" placeholder="Mobile Number" required><br><br>
-<textarea placeholder="Your Requirement" required></textarea><br><br>
-<button type="submit">Send Enquiry</button>
-</form>
+<h2>Contact Us</h2>
+<p>📞 9527431915</p>
+<p>📍 Wagholi, Pune</p>
 
-<br><br>
-
-<iframe 
-src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed"
-width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-</iframe>
-
-<br><br>
-<a href="https://www.google.com/maps/place/Sandesh+Electrical+Hub" target="_blank">
-<button>📍 Open in Google Maps</button>
-</a>
+<iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed"
+width="100%" height="250" style="border:0;"></iframe>
 </section>
 
 <footer>
-<p>© 2026 Sandesh Electrical Hub | All Rights Reserved</p>
-<p>
-Follow us on Instagram: 
-<a href="https://instagram.com/yourusername" target="_blank" style="color:#25D366;">@SandeshElectricalHub</a>
-</p>
+© 2026 Sandesh Electrical Hub | All Rights Reserved
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919527431915?text=Hello%20Sandesh%20Electrical%20Hub,%20I%20need%20electrical%20material." target="_blank">💬</a>
+<a class="float-whatsapp" href="https://wa.me/919527431915" target="_blank">💬</a>
 
-<script>
-function scrollToSection(){
-    document.getElementById("contractor").scrollIntoView({behavior:"smooth"});
-}
-
-// WhatsApp form submit
-function sendWhatsApp(){
-    var name = document.querySelector("input[placeholder='Your Name']").value;
-    var mobile = document.querySelector("input[placeholder='Mobile Number']").value;
-    var message = document.querySelector("textarea").value;
-    var url = "https://wa.me/919527431915?text=" 
-        + "Name: " + name 
-        + "%0aMobile: " + mobile 
-        + "%0aRequirement: " + message;
-    window.open(url, '_blank');
-}
-</script>
+<div class="bottom-bar">
+<a href="https://wa.me/919527431915" target="_blank">
+Chat on WhatsApp for Best Price
+</a>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
