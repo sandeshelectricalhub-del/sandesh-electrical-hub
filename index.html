@@ -87,43 +87,44 @@ body{
 }
 
 /* ===== HERO CARD SLIDER ===== */
-.hero-card-slider-container {
-    margin-top:40px;
-    overflow:hidden;
-    width:100%;
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
-    position:relative;
+.hero-card-slider-container{
+  overflow:hidden;
+  max-width:900px;
+  margin:40px auto 0 auto;
 }
 
-.hero-card-slider {
-    display:flex;
-    gap:20px;
-    width:max-content;
+.hero-card-slider{
+  display:flex;
+  gap:20px;
+  animation: slideHero 20s linear infinite;
 }
 
-.hero-card-slide {
-    min-width:300px;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(12px);
-    border-radius:20px;
-    padding:30px 20px;
-    color:white;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    flex-shrink:0;
+.hero-card-slide{
+  min-width:300px;
+  flex-shrink:0;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius:20px;
+  padding:30px 20px;
+  color:white;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-.hero-card-slide h3 {
-    color:#facc15;
-    margin-bottom:10px;
-    font-size:20px;
+.hero-card-slide h3{
+  color:#facc15;
+  margin-bottom:10px;
+  font-size:20px;
 }
 
-.hero-card-slide p {
-    font-size:16px;
-    line-height:1.6;
+.hero-card-slide p{
+  font-size:16px;
+  line-height:1.6;
+}
+
+@keyframes slideHero{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
 }
 
 /* ===== BRAND SLIDER ===== */
@@ -232,7 +233,6 @@ footer{
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
@@ -259,28 +259,49 @@ Sandesh Electrical Hub – Top-brand electricals, instant availability, expert s
 </a>
 
 <div class="hero-card-slider-container">
-    <div class="hero-card-slider" id="heroSlider">
-        <div class="hero-card-slide">
-          <h3>🎯 Mission</h3>
-          <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
-        </div>
-        <div class="hero-card-slide">
-          <h3>🚀 Vision</h3>
-          <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
-        </div>
-        <div class="hero-card-slide">
-          <h3>🏆 Top Brands</h3>
-          <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
-        </div>
-        <div class="hero-card-slide">
-          <h3>😊 Happy Customers</h3>
-          <p>1000+ satisfied customers served in Pune.</p>
-        </div>
-        <div class="hero-card-slide">
-          <h3>⏳ Years Experience</h3>
-          <p>5+ years of expertise in electrical solutions.</p>
-        </div>
-    </div>
+  <div class="hero-card-slider">
+      <div class="hero-card-slide">
+        <h3>🎯 Mission</h3>
+        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🚀 Vision</h3>
+        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🏆 Top Brands</h3>
+        <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>😊 Happy Customers</h3>
+        <p>1000+ satisfied customers served in Pune.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>⏳ Years Experience</h3>
+        <p>5+ years of expertise in electrical solutions.</p>
+      </div>
+      <!-- Duplicate slides for smooth infinite effect -->
+      <div class="hero-card-slide">
+        <h3>🎯 Mission</h3>
+        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🚀 Vision</h3>
+        <p>Powering Homes, Office & Industry with reliability, excellence, and customer experience that sets the standard.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>🏆 Top Brands</h3>
+        <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand...</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>😊 Happy Customers</h3>
+        <p>1000+ satisfied customers served in Pune.</p>
+      </div>
+      <div class="hero-card-slide">
+        <h3>⏳ Years Experience</h3>
+        <p>5+ years of expertise in electrical solutions.</p>
+      </div>
+  </div>
 </div>
 </section>
 
@@ -342,37 +363,5 @@ Sandesh Electrical Hub – Top-brand electricals, instant availability, expert s
 Chat on WhatsApp for Best Price
 </a>
 </div>
-
-<script>
-/* ===== HERO INFINITE SLIDER ===== */
-const heroSlider = document.getElementById('heroSlider');
-const slides = heroSlider.children;
-let sliderIndex = 0;
-const slideWidth = slides[0].offsetWidth + 20; // 20px gap
-
-function slideHero() {
-    sliderIndex++;
-    heroSlider.style.transition = 'transform 0.5s linear';
-    heroSlider.style.transform = `translateX(${-slideWidth * sliderIndex}px)`;
-    
-    if(sliderIndex >= slides.length) {
-        setTimeout(()=>{
-            heroSlider.style.transition = 'none';
-            heroSlider.style.transform = 'translateX(0)';
-            sliderIndex = 0;
-        }, 500);
-    }
-}
-
-// Clone slides to make smooth infinite effect
-for(let i=0;i<slides.length;i++){
-    let clone = slides[i].cloneNode(true);
-    heroSlider.appendChild(clone);
-}
-
-// Auto slide every 4s
-setInterval(slideHero, 4000);
-</script>
-
 </body>
 </html>
