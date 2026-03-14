@@ -278,295 +278,464 @@ text-decoration:none;
 </div>
 </section>
 
-<!-- PRODUCTS -->
-<section id="products" class="section">
-  <h2>Our Products</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="cards">
-    <div class="card" onclick="showProduct('wires')">Wires</div>
-    <div class="card" onclick="showProduct('switches')">Switches & Socket</div>
-    <div class="card" onclick="showProduct('mcb')">MCB & DB</div>
-    <div class="card" onclick="showProduct('fans')">Fans</div>
-    <div class="card" onclick="showProduct('lights')">Lights</div>
-    <div class="card" onclick="showProduct('tools')">Tools</div>
-    <div class="card" onclick="showProduct('geyser')">Geyser</div>
-    <div class="card" onclick="showProduct('pipes')">Pipes</div>
-  </div>
-
-  <!-- PRODUCT DETAILS -->
-  <div id="productDetails"></div>
-</section>
+<title>Sandesh Electrical Hub - Products</title>
 
 <style>
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
+
+body{
+font-family:Arial;
+background:#f5f7fb;
+margin:0;
+padding:20px;
 }
 
-.card {
-  flex: 1 1 150px;
-  padding: 15px;
-  text-align: center;
-  background: #f7f7f7;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+h1{
+text-align:center;
+color:#222;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  background: #e0e0e0;
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:12px;
+margin:30px 0;
 }
 
-.card.active {
-  background: #4caf50;
-  color: white;
+.category-btn{
+background:#0b6cff;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
 }
 
-#productDetails {
-  display: none;
-  background: white;
-  padding: 25px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+.category-btn:hover{
+background:#084bbf;
 }
 
-#productDetails h3 {
-  margin-bottom: 10px;
+#content{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
 }
 
-#productDetails ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
+.brand-toggle{
+background:#efefef;
+border:none;
+padding:10px;
+margin:6px 0;
+cursor:pointer;
+width:100%;
+text-align:left;
+font-weight:bold;
+border-radius:5px;
 }
 
-.brand-toggle {
-  margin: 10px 0;
-  padding: 8px 12px;
-  border: none;
-  background: #4caf50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
+.brand-details{
+display:none;
+padding:10px 15px;
+background:#fafafa;
+border-left:3px solid #0b6cff;
+margin-bottom:10px;
 }
 
-.brand-toggle:hover {
-  background: #45a049;
+ul{
+margin:8px 0;
+padding-left:20px;
 }
 
-.brand-details {
-  margin-bottom: 15px;
-  display: none;
-}
 </style>
+</head>
+
+<body>
+
+<h1>Sandesh Electrical Hub Products</h1>
+
+<div class="category-grid">
+
+<button class="category-btn" onclick="showCategory('wires')">Wires</button>
+<button class="category-btn" onclick="showCategory('switches')">Switches & Socket</button>
+<button class="category-btn" onclick="showCategory('lights')">Lights</button>
+<button class="category-btn" onclick="showCategory('fans')">Fans</button>
+<button class="category-btn" onclick="showCategory('geyser')">Geysers</button>
+<button class="category-btn" onclick="showCategory('mcb')">MCB & DB</button>
+<button class="category-btn" onclick="showCategory('cctv')">CCTV & Security</button>
+<button class="category-btn" onclick="showCategory('pipes')">Pipes</button>
+<button class="category-btn" onclick="showCategory('tools')">Tools</button>
+
+</div>
+
+<div id="content">
+Click a category above to view products.
+</div>
+
 
 <script>
-let currentProduct = null;
 
-function showProduct(type) {
-  const detailsDiv = document.getElementById("productDetails");
+function toggleBrand(id){
 
-  // Toggle same product
-  if(currentProduct === type){
-    detailsDiv.style.display = detailsDiv.style.display === "block" ? "none" : "block";
-    document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
-    if(detailsDiv.style.display === "block") {
-      document.querySelector(`.card[onclick="showProduct('${type}')"]`).classList.add('active');
-    } else {
-      currentProduct = null;
-    }
-    return;
-  }
+let box=document.getElementById(id);
 
-  currentProduct = type;
+if(box.style.display==="block")
+box.style.display="none";
+else
+box.style.display="block";
 
-  let content = "";
-
-  if(type==="wires"){
-    content = `
-    <h3>Polycab Wires</h3>
-    <button class="brand-toggle" onclick="toggleBrand('polycab')">+ Polycab Details</button>
-    <div id="polycab" class="brand-details">
-      <b>Polycab House Wiring (FR / FR-LSH / FRLS / ZHFR)</b>
-      <ul>
-        <li>1 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>1.5 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>2.5 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>4 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>6 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>10 sq.mm – Red, Yellow, Blue, Green, Black</li>
-      </ul>
-      <b>Polycab Multicore Flexible Wires</b>
-      <ul>
-        <li>2 Core (0.5 to 16 sq.mm)</li>
-        <li>3 Core (0.5 to 16 sq.mm)</li>
-        <li>4 Core (1.5 to 16 sq.mm)</li>
-        <li>3.5 Core (4 to 35 sq.mm)</li>
-        <li>PVC & XLPE Variant Available</li>
-      </ul>
-      <b>Polycab Industrial Cables</b>
-      <ul>
-        <li>Armoured / Unarmoured</li>
-        <li>Aluminium & Copper</li>
-        <li>1.1 KV Rating</li>
-        <li>Sizes: 4 sq.mm to 400 sq.mm</li>
-      </ul>
-    </div>
-
-    <h3>Finolex Wires</h3>
-    <button class="brand-toggle" onclick="toggleBrand('finolex')">+ Finolex Details</button>
-    <div id="finolex" class="brand-details">
-      <b>Finolex Flame Retardant (FR) Wires</b>
-      <ul>
-        <li>1 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>1.5 sq.mm – Red, Yellow, Blue, Green, Black</li>
-        <li>2.5 sq.mm – Red, Yellow, Blue, Green, Black</li>
-      </ul>
-      <b>Finolex FR-LSH / LSH Wires</b>
-      <ul>
-        <li>Low Smoke, Low Halogen</li>
-        <li>Available in 1, 1.5, 2.5 sq.mm</li>
-      </ul>
-      <b>Finolex Multicore Cables</b>
-      <ul>
-        <li>2 Core, 3 Core, 4 Core (0.5 sq.mm to 16 sq.mm)</li>
-        <li>PVC Sheathed</li>
-      </ul>
-      <b>Finolex Industrial Cables</b>
-      <ul>
-        <li>Armoured / Unarmoured</li>
-        <li>XLPE / PVC</li>
-        <li>2 Core to 4 Core</li>
-      </ul>
-    </div>
-
-    <h3>KEI Wires</h3>
-    <button class="brand-toggle" onclick="toggleBrand('kei')">+ KEI Details</button>
-    <div id="kei" class="brand-details">
-      <b>KEI HomeCab (FR / FRLS / ZHFR)</b>
-      <ul>
-        <li>1 sq.mm – Standard Colors</li>
-        <li>1.5 sq.mm</li>
-        <li>2.5 sq.mm</li>
-        <li>4 sq.mm</li>
-        <li>6 sq.mm</li>
-      </ul>
-      <b>KEI Multicore Cables</b>
-      <ul>
-        <li>2, 3, 4 Core Flexible</li>
-        <li>Sizes: 0.5 to 16 sq.mm</li>
-      </ul>
-      <b>KEI Industrial Cables</b>
-      <ul>
-        <li>LT XLPE & PVC</li>
-        <li>Armoured & Unarmoured</li>
-        <li>Copper / Aluminium</li>
-        <li>Size Range: 4 sq.mm to 400 sq.mm</li>
-      </ul>
-    </div>
-    `;
-  }
-
-  // Add simple content for other products
-  if(type==="switches"){
-    content = `
-      <h3>Switches & Socket</h3>
-      <ul>
-        <li>Anchor Roma</li>
-        <li>GM Modular</li>
-        <li>Legrand</li>
-        <li>Goldmedal</li>
-      </ul>
-    `;
-  }
-  if(type==="mcb"){
-    content = `
-      <h3>MCB & DB</h3>
-      <ul>
-        <li>L&T MCB</li>
-        <li>Havells MCB</li>
-        <li>Legrand MCB</li>
-      </ul>
-    `;
-  }
-  if(type==="fans"){
-    content = `
-      <h3>Fans</h3>
-      <ul>
-        <li>Crompton</li>
-        <li>Havells</li>
-        <li>Orient</li>
-        <li>Bajaj</li>
-      </ul>
-    `;
-  }
-  if(type==="lights"){
-    content = `
-      <h3>Lights</h3>
-      <ul>
-        <li>Philips LED</li>
-        <li>Bajaj LED</li>
-        <li>Panel Lights</li>
-        <li>Downlights</li>
-      </ul>
-    `;
-  }
-  if(type==="tools"){
-    content = `
-      <h3>Electrical Tools</h3>
-      <ul>
-        <li>Tester</li>
-        <li>Plier</li>
-        <li>Screwdriver</li>
-        <li>Drill Machine</li>
-      </ul>
-    `;
-  }
-  if(type==="geyser"){
-    content = `
-      <h3>Geyser</h3>
-      <ul>
-        <li>Bajaj Geyser</li>
-        <li>Crompton Geyser</li>
-        <li>Instant & Storage</li>
-      </ul>
-    `;
-  }
-  if(type==="pipes"){
-    content = `
-      <h3>PVC Pipes</h3>
-      <ul>
-        <li>Electrical Conduit Pipes</li>
-        <li>Heavy / Medium Pipes</li>
-        <li>Bends & Accessories</li>
-      </ul>
-    `;
-  }
-
-  detailsDiv.innerHTML = content;
-  detailsDiv.style.display = "block";
-
-  document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
-  document.querySelector(`.card[onclick="showProduct('${type}')"]`).classList.add('active');
 }
 
-// Brand toggle function
-function toggleBrand(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === "none" ? "block" : "none";
+function showCategory(type){
 
-  // Change button text
-  const btn = el.previousElementSibling;
-  if(el.style.display === "block") btn.textContent = "- " + btn.textContent.slice(2);
-  else btn.textContent = "+ " + btn.textContent.slice(2);
+let content="";
+
+if(type==="wires"){
+content=`
+
+<h2>Wires</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('polycab')">Polycab Wires</button>
+
+<div id="polycab" class="brand-details">
+
+<b>House Wiring</b>
+<ul>
+<li>1 sq.mm – Red Yellow Blue Green Black</li>
+<li>1.5 sq.mm – Red Yellow Blue Green Black</li>
+<li>2.5 sq.mm – Red Yellow Blue Green Black</li>
+<li>4 sq.mm – Red Yellow Blue Green Black</li>
+<li>6 sq.mm – Red Yellow Blue Green Black</li>
+<li>10 sq.mm – Red Yellow Blue Green Black</li>
+</ul>
+
+<b>Multicore Flexible</b>
+<ul>
+<li>2 Core (0.5-16 sq.mm)</li>
+<li>3 Core (0.5-16 sq.mm)</li>
+<li>4 Core (1.5-16 sq.mm)</li>
+<li>3.5 Core (4-35 sq.mm)</li>
+</ul>
+
+<b>Industrial Cable</b>
+<ul>
+<li>Armoured / Unarmoured</li>
+<li>Copper / Aluminium</li>
+<li>1.1 KV Rating</li>
+<li>4 sq.mm – 400 sq.mm</li>
+</ul>
+
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('finolex')">Finolex Wires</button>
+
+<div id="finolex" class="brand-details">
+
+<ul>
+<li>FR Wires 1 / 1.5 / 2.5 sq.mm</li>
+<li>FRLS / LSH Wires</li>
+<li>Multicore Cable 0.5-16 sq.mm</li>
+<li>Industrial Cable XLPE / PVC</li>
+</ul>
+
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('kei')">KEI Wires</button>
+
+<div id="kei" class="brand-details">
+
+<ul>
+<li>HomeCab FR / FRLS / ZHFR</li>
+<li>1 sq.mm – 6 sq.mm</li>
+<li>Multicore Flexible</li>
+<li>Industrial Cable upto 400 sq.mm</li>
+</ul>
+
+</div>
+
+`;
 }
+
+if(type==="switches"){
+content=`
+
+<h2>Switches & Socket</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('anchor')">Anchor</button>
+
+<div id="anchor" class="brand-details">
+<ul>
+<li>Modular Switches</li>
+<li>Piano Switches</li>
+<li>Smart Switches</li>
+<li>6A / 16A Sockets</li>
+<li>USB Charging Sockets</li>
+<li>Modular Plates 1M-12M</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('legrand')">Legrand</button>
+
+<div id="legrand" class="brand-details">
+<ul>
+<li>Arteor Series</li>
+<li>Myrius NextGen</li>
+<li>Synergy Switches</li>
+<li>Premium Modular Plates</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('goldmedal')">Goldmedal</button>
+
+<div id="goldmedal" class="brand-details">
+<ul>
+<li>Curve Series</li>
+<li>Air Modular</li>
+<li>i-Home Smart Switches</li>
+<li>USB Sockets</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="lights"){
+content=`
+
+<h2>Lights</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('halonix')">Halonix</button>
+
+<div id="halonix" class="brand-details">
+
+<ul>
+<li>LED Battens 20W / 22W</li>
+<li>LED Panels 6W-22W</li>
+<li>LED Bulbs 3W-20W</li>
+<li>RGB Strip Lights</li>
+</ul>
+
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('philips')">Philips</button>
+
+<div id="philips" class="brand-details">
+<ul>
+<li>SmartBright Panels</li>
+<li>EcoLink Batten</li>
+<li>LED Bulbs 3W-20W</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('havells-light')">Havells</button>
+
+<div id="havells-light" class="brand-details">
+<ul>
+<li>Glanz Batten</li>
+<li>Prime Panels</li>
+<li>A60 Bulbs</li>
+<li>RGB Decorative Strips</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="fans"){
+content=`
+
+<h2>Fans</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('cromptonfan')">Crompton</button>
+
+<div id="cromptonfan" class="brand-details">
+<ul>
+<li>Aura Prime</li>
+<li>Energion BLDC</li>
+<li>SilentPro Series</li>
+<li>FreshAir Exhaust</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('havellsfan')">Havells</button>
+
+<div id="havellsfan" class="brand-details">
+<ul>
+<li>Stealth Air</li>
+<li>Enticer Art</li>
+<li>Efficiencia BLDC</li>
+<li>Ventilair Exhaust</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('bajajfan')">Bajaj</button>
+
+<div id="bajajfan" class="brand-details">
+<ul>
+<li>Bajaj Frore</li>
+<li>Bajaj Maxima</li>
+<li>Bajaj Energos BLDC</li>
+<li>Bajaj BlowAir Exhaust</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="geyser"){
+content=`
+
+<h2>Geysers</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('cromptongeyser')">Crompton</button>
+
+<div id="cromptongeyser" class="brand-details">
+<ul>
+<li>Rapid Jet</li>
+<li>Bliss</li>
+<li>Arno Neo</li>
+<li>Amica Pro</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('havellsgeyser')">Havells</button>
+
+<div id="havellsgeyser" class="brand-details">
+<ul>
+<li>Instanio</li>
+<li>Fabia</li>
+<li>Monza</li>
+<li>Adonia</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="mcb"){
+content=`
+
+<h2>MCB & DB</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('anchorMCB')">Anchor</button>
+
+<div id="anchorMCB" class="brand-details">
+<ul>
+<li>Xpert Pro MCB</li>
+<li>MCCB</li>
+<li>RCBO</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('legrandMCB')">Legrand</button>
+
+<div id="legrandMCB" class="brand-details">
+<ul>
+<li>DX3 MCB</li>
+<li>DPX MCCB</li>
+<li>RX3 RCBO</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="cctv"){
+content=`
+
+<h2>CCTV & Security</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('hikvision')">Hikvision</button>
+
+<div id="hikvision" class="brand-details">
+<ul>
+<li>Dome / Bullet Cameras</li>
+<li>2MP / 4MP / 5MP</li>
+<li>Night Vision 30m</li>
+<li>DVR 4 / 8 / 16 Channel</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('cpplus')">CP Plus</button>
+
+<div id="cpplus" class="brand-details">
+<ul>
+<li>WiFi Cameras</li>
+<li>PTZ Cameras</li>
+<li>H.265 Recording</li>
+</ul>
+</div>
+
+`;
+}
+
+if(type==="pipes"){
+content=`
+
+<h2>Pipes</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('diamondpipe')">Diamond PVC Conduit</button>
+
+<div id="diamondpipe" class="brand-details">
+
+<ul>
+<li>Rigid Conduit Pipes</li>
+<li>Flexible Corrugated Pipes</li>
+<li>Casing Capping</li>
+<li>Sizes 20mm-50mm</li>
+<li>LD / MD / HD Grades</li>
+</ul>
+
+</div>
+
+`;
+}
+
+if(type==="tools"){
+content=`
+
+<h2>Tools</h2>
+
+<button class="brand-toggle" onclick="toggleBrand('taparia')">Taparia</button>
+
+<div id="taparia" class="brand-details">
+<ul>
+<li>Screwdriver Sets</li>
+<li>Pliers</li>
+<li>Spanners</li>
+<li>Hammer</li>
+<li>Socket Sets</li>
+</ul>
+</div>
+
+<button class="brand-toggle" onclick="toggleBrand('dewalt')">DEWALT</button>
+
+<div id="dewalt" class="brand-details">
+<ul>
+<li>Drill Machine</li>
+<li>Angle Grinder</li>
+<li>Marble Cutter</li>
+<li>Rotary Hammer</li>
+</ul>
+</div>
+
+`;
+}
+
+document.getElementById("content").innerHTML=content;
+
+}
+
 </script>
 
+</body>
+</html>
   
 <!-- REVIEWS -->
 <section id="reviews" class="section">
