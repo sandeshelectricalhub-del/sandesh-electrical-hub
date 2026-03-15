@@ -7,6 +7,7 @@
 <meta name="description" content="Sandesh Electrical Hub in Wagholi Pune – Wires, Switches, MCBs, Fans, Lights & more at wholesale prices.">
 
 <style>
+
 /* ===== GENERAL ===== */
 body{
   margin:0;
@@ -24,15 +25,20 @@ body{
   z-index:1000;
   box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
+
 .navbar a{
   color:white;
   margin:0 15px;
   text-decoration:none;
   font-weight:bold;
 }
-.navbar a:hover{ color:#facc15; }
+
+.navbar a:hover{
+  color:#facc15;
+}
 
 /* ===== HERO ===== */
+
 .hero{
   background: linear-gradient(-45deg,#2563eb,#1e40af,#1e3a8a,#0f172a);
   background-size:400% 400%;
@@ -41,20 +47,33 @@ body{
   padding:80px 20px;
   text-align:center;
 }
+
 @keyframes gradientBG{
   0%{background-position:0% 50%;}
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
 }
+
+/* NAME COLOR FIX */
+.hero h1{
+  text-align:center;
+  color:white;
+  text-shadow:0 3px 10px rgba(0,0,0,0.4);
+}
+
 .blink{
   font-size:22px;
   font-weight:bold;
   color:#facc15;
   animation:blink 1.2s infinite;
 }
-@keyframes blink{50%{opacity:0;}}
+
+@keyframes blink{
+  50%{opacity:0;}
+}
 
 /* ===== BUTTON ===== */
+
 .btn{
   font-size:18px;
   padding:12px 28px;
@@ -64,20 +83,32 @@ body{
   color:white;
   margin:10px;
 }
-.whatsapp-btn{background:#25D366;}
-.call-btn{background:#111827;}
-.btn:hover{transform:translateY(-3px);}
+
+.whatsapp-btn{
+  background:#25D366;
+}
+
+.call-btn{
+  background:#111827;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
 
 /* ===== HERO CARDS ===== */
+
 .hero-card-slider-container{
   max-width:1000px;
   margin:40px auto 0 auto;
   overflow-x:auto;
 }
+
 .hero-card-slider{
   display:flex;
   gap:20px;
 }
+
 .hero-card-slide{
   min-width:260px;
   flex:0 0 auto;
@@ -89,49 +120,84 @@ body{
   text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
-.hero-card-slide h3{color:#facc15;margin-bottom:10px;}
+
+.hero-card-slide h3{
+  color:#facc15;
+  margin-bottom:10px;
+}
 
 /* ===== BRAND SLIDER ===== */
+
 .brand-slider{
   overflow:hidden;
   background:white;
   padding:20px 0;
 }
+
 .brand-track{
   display:flex;
   animation:scroll 20s linear infinite;
 }
+
 .brand-track div{
   min-width:200px;
   text-align:center;
   font-weight:bold;
 }
+
 @keyframes scroll{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
 }
 
 /* ===== PRODUCTS ===== */
-.section{padding:40px 20px;text-align:center;}
-.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.card{background:white;padding:20px;width:250px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
 
-h1{text-align:center;color:#222;}
-.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:30px 0;}
-.category-btn{
-  background:#0b6cff;color:white;border:none;padding:12px;border-radius:6px;
-  cursor:pointer;font-size:15px;
+.section{
+  padding:40px 20px;
+  text-align:center;
 }
-.category-btn:hover{background:#084bbf;}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;
+  margin:30px 0;
+}
+
+.category-btn{
+  background:#0b6cff;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.category-btn:hover{
+  background:#084bbf;
+}
+
 #content{
-  background:white;padding:20px;border-radius:8px;
+  background:white;
+  padding:20px;
+  border-radius:8px;
   box-shadow:0 3px 10px rgba(0,0,0,0.08);
   text-align:left;
 }
+
 .brand-toggle{
-  background:#efefef;border:none;padding:10px;margin:6px 0;cursor:pointer;
-  width:100%;text-align:left;font-weight:bold;border-radius:5px;
+  background:#efefef;
+  border:none;
+  padding:10px;
+  margin:6px 0;
+  cursor:pointer;
+  width:100%;
+  text-align:left;
+  font-weight:bold;
+  border-radius:5px;
 }
+
 .brand-details{
   max-height:0;
   overflow:hidden;
@@ -141,304 +207,227 @@ h1{text-align:center;color:#222;}
   background:#fafafa;
   border-left:3px solid #0b6cff;
 }
-.brand-details.show{max-height:500px;}
+
+.brand-details.show{
+  max-height:500px;
+}
 
 /* ===== FOOTER ===== */
+
 footer{
-  background:#111827;color:white;text-align:center;padding:20px;
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 
 /* ===== FLOAT WHATSAPP ===== */
+
 .float-whatsapp{
-  position:fixed;bottom:80px;right:20px;
-  background:#25D366;color:white;padding:15px;
-  border-radius:50%;text-decoration:none;font-size:20px;
+  position:fixed;
+  bottom:80px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
 }
 
 /* ===== BOTTOM BAR ===== */
+
 .bottom-bar{
-  position:fixed;bottom:0;width:100%;background:#25D366;text-align:center;padding:12px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#25D366;
+  text-align:center;
+  padding:12px;
 }
-.bottom-bar a{color:white;font-weight:bold;text-decoration:none;}
+
+.bottom-bar a{
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+}
 
 /* ===== MOBILE ===== */
+
 @media(max-width:768px){
-  .cards{flex-direction:column;}
-  .card{width:90%;}
-  .hero-card-slide{min-width:90%;}
+
+.cards{
+  flex-direction:column;
 }
+
+.hero-card-slide{
+  min-width:90%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
+
 <div class="navbar">
-  <a href="#products">Products</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#contact">Contact</a>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
 </div>
 
 <!-- HERO -->
+
 <section class="hero">
-  <h1>Sandesh Electrical Hub</h1>
-  <p>Top-brand electrical materials with instant availability and expert service.</p>
-  <p class="blink">✔ All Material Available at Wholesale Price</p>
-  <h3>Wholesaler | Authorized Dealer | Contractor Special Rates</h3>
 
-  <a href="https://wa.me/919527431915" target="_blank">
-    <button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
-  </a>
-  <a href="tel:9527431915">
-    <button class="btn call-btn">📞 Call Now</button>
-  </a>
+<h1>Sandesh Electrical Hub</h1>
 
-  <div class="hero-card-slider-container">
-    <div class="hero-card-slider">
-      <div class="hero-card-slide">
-        <h3>🎯 Mission</h3>
-        <p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>🚀 Vision</h3>
-        <p>Powering Homes, Office & Industry with reliability and excellence.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>🏆 Top Brands</h3>
-        <p>Crompton, Havells, L&T, Philips, Bajaj, Legrand.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>😊 Happy Customers</h3>
-        <p>1000+ satisfied customers served in Pune.</p>
-      </div>
-      <div class="hero-card-slide">
-        <h3>⏳ Experience</h3>
-        <p>5+ years expertise in electrical solutions.</p>
-      </div>
-    </div>
-  </div>
+<p>Top-brand electrical materials with instant availability and expert service.</p>
+
+<p class="blink">✔ All Material Available at Wholesale Price</p>
+
+<h3>Wholesaler | Authorized Dealer | Contractor Special Rates</h3>
+
+<a href="https://wa.me/919527431915" target="_blank">
+<button class="btn whatsapp-btn">🟢 WhatsApp Now</button>
+</a>
+
+<a href="tel:9527431915">
+<button class="btn call-btn">📞 Call Now</button>
+</a>
+
+<div class="hero-card-slider-container">
+
+<div class="hero-card-slider">
+
+<div class="hero-card-slide">
+<h3>🎯 Mission</h3>
+<p>Delivering trusted electrical products with speed, honesty, and unbeatable value.</p>
+</div>
+
+<div class="hero-card-slide">
+<h3>🚀 Vision</h3>
+<p>Powering Homes, Office & Industry with reliability and excellence.</p>
+</div>
+
+<div class="hero-card-slide">
+<h3>🏆 Top Brands</h3>
+<p>Crompton, Havells, L&T, Philips, Bajaj, Legrand.</p>
+</div>
+
+<div class="hero-card-slide">
+<h3>😊 Happy Customers</h3>
+<p>1000+ satisfied customers served in Pune.</p>
+</div>
+
+<div class="hero-card-slide">
+<h3>⏳ Experience</h3>
+<p>5+ years expertise in electrical solutions.</p>
+</div>
+
+</div>
+</div>
+
 </section>
 
 <!-- BRAND SLIDER -->
+
 <section class="brand-slider">
-  <div class="brand-track">
-    <div>Crompton</div>
-    <div>Goldmedal</div>
-    <div>GM</div>
-    <div>Philips</div>
-    <div>Havells</div>
-    <div>RR</div>
-    <div>L&T</div>
-    <div>Orient</div>
-    <div>Bajaj</div>
-    <div>Legrand</div>
-    <!-- duplicate for seamless scroll -->
-    <div>Crompton</div>
-    <div>Goldmedal</div>
-    <div>GM</div>
-    <div>Philips</div>
-    <div>Havells</div>
-    <div>RR</div>
-    <div>L&T</div>
-    <div>Orient</div>
-    <div>Bajaj</div>
-    <div>Legrand</div>
-  </div>
+
+<div class="brand-track">
+
+<div>Crompton</div>
+<div>Goldmedal</div>
+<div>GM</div>
+<div>Philips</div>
+<div>Havells</div>
+<div>RR</div>
+<div>L&T</div>
+<div>Orient</div>
+<div>Bajaj</div>
+<div>Legrand</div>
+
+<div>Crompton</div>
+<div>Goldmedal</div>
+<div>GM</div>
+<div>Philips</div>
+<div>Havells</div>
+<div>RR</div>
+<div>L&T</div>
+<div>Orient</div>
+<div>Bajaj</div>
+<div>Legrand</div>
+
+</div>
+
 </section>
 
 <!-- PRODUCTS -->
+
 <section id="products" class="section">
-  <div class="category-grid">
-    <button class="category-btn" onclick="showCategory('wires')">Wires</button>
-    <button class="category-btn" onclick="showCategory('switches')">Switches & Socket</button>
-    <button class="category-btn" onclick="showCategory('lights')">Lights</button>
-    <button class="category-btn" onclick="showCategory('fans')">Fans</button>
-    <button class="category-btn" onclick="showCategory('geyser')">Geysers</button>
-    <button class="category-btn" onclick="showCategory('mcb')">MCB & DB</button>
-    <button class="category-btn" onclick="showCategory('cctv')">CCTV & Security</button>
-    <button class="category-btn" onclick="showCategory('pipes')">Pipes</button>
-    <button class="category-btn" onclick="showCategory('tools')">Tools</button>
-  </div>
-  <div id="content">Click a category above to view products.</div>
+
+<div class="category-grid">
+
+<button class="category-btn" onclick="showCategory('wires')">Wires</button>
+<button class="category-btn" onclick="showCategory('switches')">Switches & Socket</button>
+<button class="category-btn" onclick="showCategory('lights')">Lights</button>
+<button class="category-btn" onclick="showCategory('fans')">Fans</button>
+<button class="category-btn" onclick="showCategory('geyser')">Geysers</button>
+<button class="category-btn" onclick="showCategory('mcb')">MCB & DB</button>
+<button class="category-btn" onclick="showCategory('pipes')">Pipes</button>
+<button class="category-btn" onclick="showCategory('tools')">Tools</button>
+
+</div>
+
+<div id="content">
+Click a category above to view products.
+</div>
+
 </section>
 
-<script>
-function toggleBrand(id){
-  let box=document.getElementById(id);
-  box.classList.toggle("show");
-}
-
-function showCategory(type){
-  let content="";
-  if(type==="wires"){
-    content=`
-<h2>Wires</h2>
-<button class="brand-toggle" onclick="toggleBrand('polycab')">Polycab Wires</button>
-<div id="polycab" class="brand-details">
-<b>House Wiring</b>
-<ul>
-<li>1 sq.mm – Red Yellow Blue Green Black</li>
-<li>1.5 sq.mm – Red Yellow Blue Green Black</li>
-<li>2.5 sq.mm – Red Yellow Blue Green Black</li>
-<li>4 sq.mm – Red Yellow Blue Green Black</li>
-<li>6 sq.mm – Red Yellow Blue Green Black</li>
-<li>10 sq.mm – Red Yellow Blue Green Black</li>
-</ul>
-<b>Multicore Flexible</b>
-<ul>
-<li>2 Core (0.5-16 sq.mm)</li>
-<li>3 Core (0.5-16 sq.mm)</li>
-<li>4 Core (1.5-16 sq.mm)</li>
-<li>3.5 Core (4-35 sq.mm)</li>
-</ul>
-<b>Industrial Cable</b>
-<ul>
-<li>Armoured / Unarmoured</li>
-<li>Copper / Aluminium</li>
-<li>1.1 KV Rating</li>
-<li>4 sq.mm – 400 sq.mm</li>
-</ul>
-</div>
-
-<button class="brand-toggle" onclick="toggleBrand('finolex')">Finolex Wires</button>
-<div id="finolex" class="brand-details">
-<ul>
-<li>FR Wires 1 / 1.5 / 2.5 sq.mm</li>
-<li>FRLS / LSH Wires</li>
-<li>Multicore Cable 0.5-16 sq.mm</li>
-<li>Industrial Cable XLPE / PVC</li>
-</ul>
-</div>
-<button class="brand-toggle" onclick="toggleBrand('kei')">KEI Wires</button>
-<div id="kei" class="brand-details">
-<ul>
-<li>HomeCab FR / FRLS / ZHFR</li>
-<li>1 sq.mm – 6 sq.mm</li>
-<li>Multicore Flexible</li>
-<li>Industrial Cable upto 400 sq.mm</li>
-</ul>
-</div>`;
-  }
-  if(type==="switches"){content=`<h2>Switches & Socket</h2>
-<button class="brand-toggle" onclick="toggleBrand('anchor')">Anchor</button>
-<div id="anchor" class="brand-details">
-<ul>
-<li>Modular Switches</li>
-<li>Piano Switches</li>
-<li>Smart Switches</li>
-<li>6A / 16A Sockets</li>
-<li>USB Charging Sockets</li>
-<li>Modular Plates 1M-12M</li>
-</ul></div>
-<button class="brand-toggle" onclick="toggleBrand('legrand')">Legrand</button>
-<div id="legrand" class="brand-details">
-<ul>
-<li>Arteor Series</li>
-<li>Myrius NextGen</li>
-<li>Synergy Switches</li>
-<li>Premium Modular Plates</li>
-</ul></div>
-<button class="brand-toggle" onclick="toggleBrand('goldmedal')">Goldmedal</button>
-<div id="goldmedal" class="brand-details">
-<ul>
-<li>Curve Series</li>
-<li>Air Modular</li>
-<li>i-Home Smart Switches</li>
-<li>USB Sockets</li>
-</ul></div>`;}
-if(type==="lights"){content=`<h2>Lights</h2>
-<button class="brand-toggle" onclick="toggleBrand('halonix')">Halonix</button>
-<div id="halonix" class="brand-details">
-<ul>
-<li>LED Battens 20W / 22W</li>
-<li>LED Panels 6W-22W</li>
-<li>LED Bulbs 3W-20W</li>
-<li>RGB Strip Lights</li>
-</ul></div>
-<button class="brand-toggle" onclick="toggleBrand('philips')">Philips</button>
-<div id="philips" class="brand-details">
-<ul>
-<li>SmartBright Panels</li>
-<li>EcoLink Batten</li>
-<li>LED Bulbs 3W-20W</li>
-</ul></div>
-<button class="brand-toggle" onclick="toggleBrand('havells-light')">Havells</button>
-<div id="havells-light" class="brand-details">
-<ul>
-<li>Glanz Batten</li>
-<li>Prime Panels</li>
-<li>A60 Bulbs</li>
-<li>RGB Decorative Strips</li>
-</ul></div>`;}
-if(type==="fans"){content=`<h2>Fans</h2>
-<button class="brand-toggle" onclick="toggleBrand('cromptonfan')">Crompton</button>
-<div id="cromptonfan" class="brand-details">
-<ul><li>Aura Prime</li><li>Energion BLDC</li><li>SilentPro Series</li><li>FreshAir Exhaust</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('havellsfan')">Havells</button>
-<div id="havellsfan" class="brand-details">
-<ul><li>Stealth Air</li><li>Enticer Art</li><li>Efficiencia BLDC</li><li>Ventilair Exhaust</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('bajajfan')">Bajaj</button>
-<div id="bajajfan" class="brand-details">
-<ul><li>Bajaj Frore</li><li>Bajaj Maxima</li><li>Bajaj Energos BLDC</li><li>Bajaj BlowAir Exhaust</li></ul></div>`;}
-if(type==="geyser"){content=`<h2>Geysers</h2>
-<button class="brand-toggle" onclick="toggleBrand('cromptongeyser')">Crompton</button>
-<div id="cromptongeyser" class="brand-details">
-<ul><li>Rapid Jet</li><li>Bliss</li><li>Arno Neo</li><li>Amica Pro</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('havellsgeyser')">Havells</button>
-<div id="havellsgeyser" class="brand-details">
-<ul><li>Instanio</li><li>Fabia</li><li>Monza</li><li>Adonia</li></ul></div>`;}
-if(type==="mcb"){content=`<h2>MCB & DB</h2>
-<button class="brand-toggle" onclick="toggleBrand('anchorMCB')">Anchor</button>
-<div id="anchorMCB" class="brand-details">
-<ul><li>Xpert Pro MCB</li><li>MCCB</li><li>RCBO</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('legrandMCB')">Legrand</button>
-<div id="legrandMCB" class="brand-details">
-<ul><li>DX3 MCB</li><li>DPX MCCB</li><li>RX3 RCBO</li></ul></div>`;}
-if(type==="cctv"){content=`<h2>CCTV & Security</h2>
-<button class="brand-toggle" onclick="toggleBrand('hikvision')">Hikvision</button>
-<div id="hikvision" class="brand-details">
-<ul><li>Dome / Bullet Cameras</li><li>2MP / 4MP / 5MP</li><li>Night Vision 30m</li><li>DVR 4 / 8 / 16 Channel</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('cpplus')">CP Plus</button>
-<div id="cpplus" class="brand-details">
-<ul><li>WiFi Cameras</li><li>PTZ Cameras</li><li>H.265 Recording</li></ul></div>`;}
-if(type==="pipes"){content=`<h2>Pipes</h2>
-<button class="brand-toggle" onclick="toggleBrand('diamondpipe')">Diamond PVC Conduit</button>
-<div id="diamondpipe" class="brand-details">
-<ul><li>Rigid Conduit Pipes</li><li>Flexible Corrugated Pipes</li><li>Casing Capping</li><li>Sizes 20mm-50mm</li><li>LD / MD / HD Grades</li></ul></div>`;}
-if(type==="tools"){content=`<h2>Tools</h2>
-<button class="brand-toggle" onclick="toggleBrand('taparia')">Taparia</button>
-<div id="taparia" class="brand-details">
-<ul><li>Screwdriver Sets</li><li>Pliers</li><li>Spanners</li><li>Hammer</li><li>Socket Sets</li></ul></div>
-<button class="brand-toggle" onclick="toggleBrand('dewalt')">DEWALT</button>
-<div id="dewalt" class="brand-details">
-<ul><li>Drill Machine</li><li>Angle Grinder</li><li>Marble Cutter</li><li>Rotary Hammer</li></ul></div>`;}
-document.getElementById("content").innerHTML=content;
-}
-</script>
-
 <!-- REVIEWS -->
+
 <section id="reviews" class="section">
-  <h2>Customer Reviews</h2>
-  <p>★★★★★ Best electrical shop in Wagholi</p>
-  <p>★★★★★ Good quality material at wholesale rate</p>
+
+<h2>Customer Reviews</h2>
+
+<p>★★★★★ Best electrical shop in Wagholi</p>
+<p>★★★★★ Good quality material at wholesale rate</p>
+
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>📞 9527431915</p>
-  <p>📍 Wagholi, Pune</p>
-  <iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed" width="100%" height="250" style="border:0;"></iframe>
+
+<h2>Contact Us</h2>
+
+<p>📞 9527431915</p>
+
+<p>📍 Wagholi, Pune</p>
+
+<iframe src="https://www.google.com/maps?q=Sandesh+Electrical+Hub+Wagholi+Pune&output=embed"
+width="100%" height="250" style="border:0;"></iframe>
+
 </section>
 
 <footer>
-  © 2026 Sandesh Electrical Hub | All Rights Reserved
+
+© 2026 Sandesh Electrical Hub | All Rights Reserved
+
 </footer>
 
-<a class="float-whatsapp" href="https://wa.me/919527431915" target="_blank">💬</a>
+<a class="float-whatsapp"
+href="https://wa.me/919527431915"
+target="_blank">💬</a>
 
 <div class="bottom-bar">
-  <a href="https://wa.me/919527431915" target="_blank">Chat on WhatsApp for Best Price</a>
+<a href="https://wa.me/919527431915" target="_blank">
+Chat on WhatsApp for Best Price
+</a>
 </div>
 
 </body>
